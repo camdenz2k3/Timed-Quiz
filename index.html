@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timed JavaScript Quiz</title>
+    <link rel="stylesheet" href="./Assets/css/style.css" />
+    <link rel="stylesheet" href="Assets/css/reset.css" />
+</head>
+
+<body>
+        <header>
+            <h1>JavaScript Quiz</h1>
+            <a id="highScores" href="#high-scores">View High Scores</a>
+            <p id="timer">Time: <span id="timeLeft">75</span></p>
+        </header>
+    <main>
+        <div class="container-fluid">
+
+            <!--start screen  -->
+            <section id="start" class="m-2 justify-content-center">
+                <p class="p-5">Let's test your knowledge on JavaScript! Try to answer the followding JavaScript related questions within the time limit. Incorrect answers will penalize your time by 15 seconds!</p>
+                <button type="button" id="start-quiz-button" class="btn btn-info ml-5 align-center">Start Quiz</button>
+            </section>
+
+            <!--quiz div  -->
+            <section id="questionOne" class="question">
+                <h2>Arrays in JavaScript can be used to store</h2>
+                <div id="one">
+                    <button class="q1"data-answer="correct">alerts</button>>strings</button>
+                    <button class="q1">booleans</button>
+                    <button class="q1">strings</button>
+                    <button class="q1">numbers</button>
+                </div>
+            </section>
+            <section id="questionTwo" class="question">
+                <h2>The condition in an if / else statement is enclosed with ________.</h2>
+                <div id="two">
+                    <button class="q2">1. quotes</button>
+                    <button class="q2"data-answer="correct">3. parenthesis</button>>2. curly brackets</button>
+                    <button class="q2">2. curly brackets</button>
+                    <button class="q2">4. square brackets</button>
+                </div>
+                <hr/>
+                <p id="answerCheck"></p>
+            </section>
+            <section id="questionThree" class="question">
+                <h2>Arrays in JavaScript can be used to store ________.</h2>
+                <div id="three">
+                    <button class="q3">1. numbers and strings</button>
+                    <button class="q3">2. other arrays</button>
+                    <button class="q3">3. booleans</button>
+                    <button class="q3" data-answer="correct">4. all of the above</button>
+                </div>
+                <hr/>
+                <p id="answerCheck"></p>
+            </section>
+            <section id="questionFour" class="question">
+                <h2>String values must be enclosed within ________ when being assigned to variables.</h2>
+                <div id="four">
+                    <button class="q4">1. commas</button>
+                    <button class="q4">2. curly brackets</button>
+                    <button class="q4" data-answer="correct">3. quotes</button>
+                    <button class="q4">4. parenthesis</button>
+                </div>
+                <hr/>
+                <p id="answerCheck"></p>
+            </section>
+            <section id="question5" class="question">
+                <h2>A very useful tool used during development and debugging for printing content to the debugger is:</h2>
+                <div id="five">
+                    <button class="q5">1. JavaScript</button>
+                    <button class="q5">2. terminal/bash</button>
+                    <button class="q5">3. for loops</button>
+                    <button class="q5" data-answer="correct">4. console log</button>
+                </div>
+                <hr/>
+                <p id="answerCheck"></p>
+            </section>
+                <!--results section  -->
+            <section id="results">
+                <h2>Finished!</h2>
+                <h4>Your final score is <span id="score"></span>.</h4>
+                <form action="assets/scores.html">
+                    <h4>Enter initials:</h4>
+                    <input id="initials" type="text">
+                    <input id="submit" type="submit">
+                </form>
+                <hr/>
+                <p id="answerCheck"></p>
+            </section>
+            <section id="high-scores" data-state="hidden">
+                <h1 id="high-score-title">High Scores</h1>
+                <ol id="all-scores"></ol>
+                <button id="play-again">Play again</button>
+                <button id="clear">Clear High Scores</button>
+            </section>
+    </main>
+</body>
+</html>
