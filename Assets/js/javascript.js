@@ -54,7 +54,7 @@ function guessAnswer(event) {
             questions[index].setAttribute('data-state', 'visible');
         } else {
             questions[4].setAttribute('data-state', 'hidden');
-            answer.setAttribute('data-state', 'visible');
+            resultsPage.setAttribute('data-state', 'visible');
             timeRemaining.textContent = timeLeft;
             score.textContent = timeLeft;
             clearInterval(stopTime);
@@ -76,7 +76,7 @@ function setTime() {
 
 function zeroTime() {
     questions[index].setAttribute('data-state', 'hidden');
-    answer.setAttribute('data-state', 'visible');
+    resultsPage.setAttribute('data-state', 'visible');
     score.textContent = timeLeft;
 }
 
